@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dp -->
+    <dimen name="toolbar_dp">45dp</dimen>
+
+
+    <!-- sp -->
+    <dimen name="default_string_sp">16sp</dimen>
+
+</resources>

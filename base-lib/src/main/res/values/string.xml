@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_string">jetpack</string>
+
+    <string name="more_string">更多</string>
+</resources>
