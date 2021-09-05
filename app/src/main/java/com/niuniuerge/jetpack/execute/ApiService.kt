@@ -18,14 +18,15 @@ interface ApiService {
 
     @FormUrlEncoded
     @POST("")
-    suspend fun secondaryMenu(@Field("channel_id")channelId :String) :Response<DataResponse.SecondaryMenu>
+    suspend fun secondaryMenu(@Field("channel_id")channelId :String) :Response<MutableList<DataResponse.SecondaryMenu>>
 
     @FormUrlEncoded
     @POST("")
-    suspend fun tertiaryMenu(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId:String):Response<DataResponse.TertiaryMenu>
+    suspend fun tertiaryMenu(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId:String):Response<MutableList<DataResponse.TertiaryMenu>>
 
     @FormUrlEncoded
     @POST("")
-    suspend fun homeList(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId: String):Response<String>
+    suspend fun homeNovelList(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId: String):Response<MutableList<DataResponse.HomeNovelList>>
+
 
 }
