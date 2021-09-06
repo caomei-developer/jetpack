@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import com.airbnb.lottie.LottieAnimationView
 import com.jetpack.base.R
 import com.scwang.smartrefresh.layout.api.RefreshHeader
@@ -24,7 +23,7 @@ class LottieHeader : FrameLayout, RefreshHeader {
     }
 
     private fun initView() {
-        var view = (context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)as LayoutInflater).inflate(R.layout.lottie_header_view,this)
+        var view = (context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)as LayoutInflater).inflate(R.layout.base_lottie_header_view,this)
         lottieAnimatorView = view.findViewById(R.id.lottie_header)
         lottieAnimatorView?.playAnimation()
     }

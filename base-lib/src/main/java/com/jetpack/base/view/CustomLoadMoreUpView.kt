@@ -44,6 +44,6 @@ class CustomLoadMoreUpView : BaseLoadMoreView(){
     }
 
     override fun getRootView(parent: ViewGroup): View {
-        return LayoutInflater.from(parent.context).inflate(R.layout.view_load_more_up,parent,false)
+        return LayoutInflater.from(parent.context).inflate(R.layout.base_load_more_up_view,parent,false)
     }
 }

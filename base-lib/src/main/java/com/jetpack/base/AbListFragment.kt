@@ -31,12 +31,12 @@ class AbListFragment<T> : BaseFragment(), LoadingListener {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_ablist,container,false)
+        return inflater.inflate(R.layout.fragment_base_list,container,false)
     }
 
     override fun showLoading() {
         if (loadingView == null){
-            var viewStub  = view?.findViewById<ViewStub>(R.layout.empty_view)
+            var viewStub  = view?.findViewById<ViewStub>(R.layout.base_empty_view)
         }
 
     }
