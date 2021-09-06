@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import com.airbnb.lottie.LottieAnimationView
 import com.jetpack.base.R
@@ -13,7 +14,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.constant.RefreshState
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle
 
-class LottieHeader : LinearLayout, RefreshHeader {
+class LottieHeader : FrameLayout, RefreshHeader {
 
     private var lottieAnimatorView: LottieAnimationView? = null
 
