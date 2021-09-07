@@ -8,6 +8,7 @@ import com.niuniuerge.jetpack.home.bean.HomeResponse
 
 class HomeFragment : AbListFragment<HomeResponse>(){
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
