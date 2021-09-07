@@ -67,4 +67,6 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     //动画
     api( 'com.airbnb.android:lottie:3.4.0')
+    //immersionbar
+    api 'com.gyf.immersionbar:immersionbar:2.3.3'
 }

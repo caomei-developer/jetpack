@@ -8,20 +8,20 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.jetpack.base.R
 import java.util.*
 
-class CustomLoadMoreUpView : BaseLoadMoreView(){
+class CustomLoadMoreView : BaseLoadMoreView(){
 
     var force:Boolean = false
 
     var type :String?=null
 
 
-    fun setForce(force: Boolean): CustomLoadMoreUpView? {
+    fun setForce(force: Boolean): CustomLoadMoreView? {
         this.force = force
         return this
     }
 
 
-    fun setType(type: String?): CustomLoadMoreUpView? {
+    fun setType(type: String?): CustomLoadMoreView? {
         this.type = type
         return this
     }
