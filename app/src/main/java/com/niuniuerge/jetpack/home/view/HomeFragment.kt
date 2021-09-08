@@ -23,5 +23,4 @@ class HomeFragment : AbListFragment<HomeResponse>(){
     }
 
 
-
 }
