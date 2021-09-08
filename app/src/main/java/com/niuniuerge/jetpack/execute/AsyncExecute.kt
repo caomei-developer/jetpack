@@ -23,15 +23,24 @@ open class AsyncExecute : HttpRepository()  {
         }
     }
 
-    suspend fun tertiaryMenuAndHomeList(channelId: String,menuId:String) = withContext(Dispatchers.IO){
+    suspend fun tertiaryMenuAndHomeList(channelId: String,menuId:String,page:Int) = withContext(Dispatchers.IO){
         coroutineScope {
 
             var tertiaryMenu = async { retrofit.getService(ApiService::class.java).tertiaryMenu(channelId, menuId) }
-            var homeList = async { retrofit.getService(ApiService::class.java).homeNovelList(channelId, menuId) }
+            var homeList = async { retrofit.getService(ApiService::class.java).homeNovelList(channelId, menuId,page) }
 
             HomeResponse(tertiaryMenu.await().data!!,homeList.await().data!!)
 
         }
+    }
+
+    suspend fun moreHomeList(channelId: String, menuId: String, page: Int) = withContext(Dispatchers.IO){
+        coroutineScope {
+            var response = async { retrofit.getService(ApiService::class.java).homeNovelList(channelId, menuId, page) }
+
+            response.await()
+        }
+
     }
 
 

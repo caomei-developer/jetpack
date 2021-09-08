@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.chad.library.adapter.base.listener.OnLoadMoreListener
 import com.chad.library.adapter.base.loadmore.BaseLoadMoreView
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
@@ -17,7 +19,7 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.constant.RefreshState
 
 
-abstract class AbListFragment<T> : BaseFragment(), LoadingListener ,
+abstract class AbListFragment<T : MultiItemEntity> : BaseFragment(), LoadingListener ,
     OnLoadMoreListener {
     protected var TAG : String = "AbListFragment"
 
@@ -38,7 +40,6 @@ abstract class AbListFragment<T> : BaseFragment(), LoadingListener ,
     protected var page : Int = 1
 
     private var binding:FragmentBaseListBinding?=null
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentBaseListBinding.inflate(inflater,container,false)
@@ -149,6 +150,7 @@ abstract class AbListFragment<T> : BaseFragment(), LoadingListener ,
     override fun hiedLoading() {
 
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
