@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaseActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="@dimen/toolbar_dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/default_string"
+            android:textColor="@color/A2"
+            android:textSize="@dimen/default_string_sp" />
+
+        <ImageView
+            android:id="@+id/more_iv"
+            android:layout_width="@dimen/toolbar_dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/more_tv"
+            android:layout_width="@dimen/toolbar_dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/more_string"
+            android:textColor="@color/A2"
+            android:textSize="@dimen/default_string_sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_layout"/>
+
+</RelativeLayout>

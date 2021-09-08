@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_string">jetpack</string>
+
+    <string name="more_string">更多</string>
+
+    <string name="load_more_complete">加载完成啦～</string>
+
+    <string name="load_more_fail">加载失败了呢～</string>
+
+    <string name="load_more_end">暂无更多内容哦～</string>
+
+    <string name="load_more_loading">主人正在加载啦～</string>
+    
+    <string name="base_empty_tip">主人暂无内容哦～</string>
+
+    <string name="base_error_tip">主人加载内容失败了，重新点一下哦～</string>
+
+    <string name="base_error_retry">重新加载啦～</string>
+
+    <string name="base_network_error_check_tip">主人网络故障啦，请检查哦～</string>
+
+    <string name="base_network_error">没有网络呢，加载不出内容啦~</string>
+
+    <string name="base_empty_no_data">主人暂无内容哦～</string>
+
+    <string name="base_load_finish">主人已经到底了啦~</string>
+
+
+</resources>
