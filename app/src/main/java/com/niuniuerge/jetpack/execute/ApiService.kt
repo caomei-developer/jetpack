@@ -26,7 +26,7 @@ interface ApiService {
 
     @FormUrlEncoded
     @POST("")
-    suspend fun homeNovelList(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId: String):Response<MutableList<DataResponse.HomeNovelList>>
+    suspend fun homeNovelList(@Field("channel_id")channelId: String,@Field("secondary_menu_id")menuId: String,@Field("page")page:Int):Response<MutableList<DataResponse.HomeNovelList>>
 
 
 }

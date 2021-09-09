@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.badoo.mobile.util.WeakHandler
 import com.jetpack.BaseApplication
 
-open class BaseFragment : Fragment() {
+abstract class BaseFragment : Fragment() {
     private var viewModelProvider: ViewModelProvider? = null
 
     protected var weakHandler: WeakHandler = WeakHandler()
@@ -25,9 +25,9 @@ open class BaseFragment : Fragment() {
         initView()
     }
 
-    protected fun initView(){}
+    abstract fun initView()
 
-    protected fun initViewModel() {}
+    abstract fun initViewModel()
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)

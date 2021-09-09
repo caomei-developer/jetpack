@@ -1,5 +1,7 @@
 package com.niuniuerge.jetpack.execute.bean
 
+import com.chad.library.adapter.base.entity.MultiItemEntity
+
 class DataResponse {
 
     /**
@@ -14,6 +16,10 @@ class DataResponse {
      */
     data class SecondaryMenu(val menuId:String,val menuChannel:String)
     data class TertiaryMenu(val secondaryMenuId: String,val menuChannel: String)
-    data class HomeNovelList(val novelTitle:String,val novelId:String,val novelCover:String,val novelDescribe:String,val novelAuthor:String)
+    data class HomeNovelList(val novelTitle:String, val novelId:String, val novelCover:String, val novelDescribe:String, val novelAuthor:String,
+                             override val itemType:Int):MultiItemEntity
+
+
+
 
 }
