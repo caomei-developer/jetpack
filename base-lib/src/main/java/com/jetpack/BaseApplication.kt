@@ -12,6 +12,7 @@ open class BaseApplication : Application() {
         app = this
     }
 
+
     fun addActivity(activity: Activity){
         activitys?.add(activity)
     }
