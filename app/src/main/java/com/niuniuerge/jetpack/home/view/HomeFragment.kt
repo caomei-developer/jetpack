@@ -31,13 +31,16 @@ class HomeFragment : AbListFragment<DataResponse.HomeNovelList>(){
         mState?.moreData?.observe(viewLifecycleOwner, Observer {
             if (it.isSuccess){
                 var response = it.getOrNull()
+                adapter?.loadMoreModule?.loadMoreComplete()
                 if (response == null){
-
+                    adapter?.loadMoreModule?.loadMoreEnd()
                     return@Observer
                 }
-                adapter?.setList(response?.homeNovelList)
+                adapter?.addData(response?.homeNovelList!!)
+
             }
         })
+
 
 
     }

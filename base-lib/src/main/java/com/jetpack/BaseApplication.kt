@@ -17,5 +17,4 @@ open class BaseApplication : Application() {
         activitys?.add(activity)
     }
 
-
 }
