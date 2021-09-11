@@ -1,0 +1,16 @@
+gen
+build/
+out/
+app/.gradle/
+app/app-release.apk
+app/app-debug.apk
+.idea/
+.gradle/
+app/build/
+gradle/
+gradlew
+gradlew.bat
+local.properties
+app/app.iml
+.DS_Store
+*.iml
