@@ -19,7 +19,6 @@ class LoadingView: FrameLayout{
         if (v == null) {
             LayoutInflater.from(context).inflate(R.layout.base_empty_view, this)
         }
-
         v = findViewById(R.id.base_error_viewstub)
         if (v == null) {
             LayoutInflater.from(context).inflate(R.layout.base_error_view, this)

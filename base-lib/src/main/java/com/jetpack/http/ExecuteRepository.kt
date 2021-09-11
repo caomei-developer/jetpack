@@ -2,10 +2,11 @@ package com.jetpack.http
 
 import androidx.lifecycle.MutableLiveData
 import com.jetpack.http.bean.Response
+
 import java.lang.Exception
 
 open class ExecuteRepository {
-    suspend fun <T : Any> executeResponse(block:suspend ()->Response<T>,mutableLiveData: MutableLiveData<Response<T>>){
+    suspend fun <T : Any> executeResponse(block:suspend ()-> Response<T>, mutableLiveData: MutableLiveData<Response<T>>){
         var response = Response<T>()
         try {
            var invoke  = block.invoke()
