@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 
 open class BaseApplication : Application() {
-    var activitys : MutableList<Activity> = ArrayList()
+    var activitys : MutableList<Activity> = mutableListOf()
     var app : BaseApplication?=null
 
     override fun onCreate() {
@@ -14,7 +14,7 @@ open class BaseApplication : Application() {
 
 
     fun addActivity(activity: Activity){
-        activitys?.add(activity)
+        activitys.add(activity)
     }
 
 }

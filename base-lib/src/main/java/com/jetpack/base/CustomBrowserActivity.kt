@@ -66,7 +66,6 @@ class CustomBrowserActivity : BaseActivity() {
          }
 
 
-
     }
 
     inner class getHtmlObject{
